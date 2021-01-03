@@ -26,6 +26,21 @@ from tslearn.preprocessing import TimeSeriesScalerMinMax
 from tslearn.shapelets import LearningShapelets, \
     grabocka_params_to_shapelet_size_dict
 from tensorflow.keras.optimizers import Adam
+import tensorflow as tf
+
+# for debug in tf 1.x
+# config = tf.ConfigProto()
+# config.gpu_options.allow_growth = True
+# sess = tf.Session(config=config)
+
+# allow memory grow for tf 2.x
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    try:
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+    except RuntimeError as e:
+        print(e)
 
 # Set a seed to ensure determinism
 numpy.random.seed(42)

@@ -25,6 +25,20 @@ from tslearn.shapelets import LearningShapelets, \
     grabocka_params_to_shapelet_size_dict
 from tslearn.utils import ts_size
 
+# for debug in tf 1.x
+# config = tf.ConfigProto()
+# config.gpu_options.allow_growth = True
+# sess = tf.Session(config=config)
+
+# allow memory grow for tf 2.x
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    try:
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+    except RuntimeError as e:
+        print(e)
+
 # Set seed for determinism
 numpy.random.seed(0)
 
