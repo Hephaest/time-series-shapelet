@@ -54,3 +54,11 @@
   </tr>
 </tbody>
 </table>
+
+### References
+
+- [Whole Environment Installation blog](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781)
+- [Install TensorFlow with pip](https://www.tensorflow.org/install/pip#system-install)
+- [Install TensorFlow with GPU support](https://www.tensorflow.org/install/gpu)
+- [CUDA Installation Guide for Microsoft Windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
+- [Installing cuDNN On Windows](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#install-windows)
